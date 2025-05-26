@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes glowing-border {
+        0%,
+        100% {
+            box-shadow: 
+            0 0 1px rgba(59, 237, 246, 0.5), 
+            0 0 5px rgba(59, 237, 246, 0.5), 
+            0 0 10px rgba(59, 237, 246, 0.5);
+            border-color: rgba(59, 237, 246, 0.5);
+        }
+        50% {
+            box-shadow: 
+            0 0 15px rgba(59, 237, 246, 0.5), 
+            0 0 30px rgba(59, 237, 246, 0.5), 
+            0 0 50px rgba(59, 237, 246, 0.5);
+            border-color: rgba(59, 237, 246, 0.5);
+        }
+        }
+        .glowing-border {
+            border: 0 transparent rgba(59, 237, 246, 0.5);
+            animation: glowing-border 1.5s infinite alternate;
+        }
+
+        @keyframes glowing-border-red {
+            0%,
+            100% {
+                box-shadow: 
+                0 0 1px rgba(255, 26, 26, 0.315), 
+                0 0 5px rgba(255, 26, 26, 0.315), 
+                0 0 10px rgba(255, 26, 26, 0.315);
+                border-color: rgba(255, 26, 26, 0.315);
+            }
+            50% {
+                box-shadow: 
+                0 0 15px rgba(255, 26, 26, 0.315), 
+                0 0 30px rgba(255, 26, 26, 0.315), 
+                0 0 50px rgba(255, 26, 26, 0.315);
+                border-color: rgba(255, 26, 26, 0.315);
+            }
+        }
+        .glowing-border-red {
+            border: 0 transparent rgba(255, 26, 26, 0.315);
+            animation: glowing-border-red 1.5s infinite alternate;
+        }
+
+        @keyframes glowing-border-smaller {
+          0%,
+          100% {
+            box-shadow:
+              0 0 5px rgba(59, 237, 246, 0.5),
+              0 0 10px rgba(59, 237, 246, 0.5),
+              0 0 15px rgba(59, 237, 246, 0.5);
+            border-color: rgba(59, 237, 246, 0.5);
+          }
+          50% {
+            box-shadow:
+              0 0 10px rgba(59, 237, 246, 0.5),
+              0 0 15px rgba(59, 237, 246, 0.5),
+              0 0 20px rgba(59, 237, 246, 0.5);
+            border-color: rgba(59, 237, 246, 0.5);
+          }
+        }
+        .glowing-border-smaller {
+          border: 2px solid transparent;
+          animation: glowing-border-smaller 1.5s infinite alternate;
+        }
+        *::selection {
+            background-color: black;
+            color: white;
+        }
+        .bottom-shadow {
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div class="h-[200vh] w-full absolute z-20 flex items-center justify-center mt-24">
+            <img data-scroll data-scroll-speed="-2" src="mrf-bat2-Photoroom.png" alt="Bat" class="h-[150vh] w-[100%] lg:h-[190vh] lg:w-[140vh] opacity-60 md:opacity-100 lg:opacity-100 max-w-full"/>
+        </div>
+        
+        <div class="boxes flex flex-col bg-gradient-to-b from-red-300 to-white max-w-fit">
+            <div class="uppercase font-serif text-center py-7 text-[2.5rem] relative flex gap-3 justify-center z-10"><p class="the font-serif text-[2.5rem] text-red-700 font-bold -mr-4 lg:mr-0">'THE'</p> <p class="header">Virat Kohli</p></div>
+            <div class="row h-[50vh] w-full relative z-20 flex items-center md:px-10 lg:px-32">
+                <div data-scroll data-scroll-speed="3" class="box h-[80%] w-[100%] md:w-[40%] lg:w-[40%]">
+                    <h2 class="font-bold font-serif text-[1.65rem] uppercase text-center text-red-700 py-2">" Born to Reign</h2>
+                    <p class="font-serif text-[1.3rem] px-3 text-center">From the streets of Delhi to the summit of world cricket. He wasn't just born — he was forged in fire.
+                    The crown found its rightful king. 2008 — a young lad in blue steps onto the world stage. He didn't knock on greatness' door — he kicked it open. 
+                    The hunger in his eyes said it all. <span class="text-[1.65rem] text-red-700 font-serif">"</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row h-[50vh] w-full relative z-20 flex items-center justify-end px-0 md:px-5 lg:px-0">
+                <div data-scroll data-scroll-speed="3" class="box h-[90%] w-[100%] md:w-[50%] lg:w-[42%]">
+                    <h2 class="font-bold font-serif text-[1.65rem] uppercase text-center text-red-700 md:py-1">" ICC's HERO "</h2>
+                    <p class="font-serif text-[1.3rem] px-3 text-center">
+                        <p class="font-serif text-[1.3rem] px-10 md:my-0 lg:my-3">3x Player of the Tournament.</p>
+                        <p class="font-serif text-[1.3rem] px-10 md:my-1 lg:my-3">Most runs in a single World Cup - 765 in 2023.</p>
+                        <p class="font-serif text-[1.3rem] px-10 md:my-1 lg:my-3">Most runs in T20 World Cup history - 1,292.</p>
+                        <p class="font-serif text-[1.3rem] px-10 md:my-1 lg:my-3">He didn't just show up at ICC events <br> <span class="text-[1.3rem] text-red-700 font-serif ml-1">- He conquered!</span></p> 
+                    </p>
+                </div>
+            </div>
+            <div class="row h-[50vh] w-full relative z-20 flex items-center md:px-10 lg:px-32">
+                <div data-scroll data-scroll-speed="3" class="box h-[90%] w-[100%] md:w-[40%] lg:w-[40%]">
+                    <h2 class="font-bold font-serif text-[1.65rem] uppercase text-center text-red-700 py-2">" Big Match Brilliance</h2>
+                    <p class="font-serif text-[1.3rem] px-3 text-center">Big match? Call Kohli. Most runs in ICC knockouts (1023) with and average of 52!
+                    Saved collapses uncountable times and led India to victory. Target set? Pressure high? Give him a chase and he'll give you a masterclass.
+                    No heartbeat. Just calculation. THE <span class="text-[1.3rem] text-red-700 font-serif ml-1">CHASEMASTER!</span> <span class="text-[1.65rem] text-red-700 font-serif">"</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="h-[70vh] w-full absolute z-0 flex items-center justify-start bg-transparent mt-36 lg:mt-36">
+            <img src="vk-2016-4.png" alt="Bat" class="h-[90vh] w-[100%] lg:h-[100vh] lg:w-[85vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+        </div>
+        <div class="t20 bg-gradient-to-b from-white to-cyan-400 h-[270vh] lg:h-[210vh]">
+            <div class="row h-[25vh] lg:h-[50vh] w-[100%] relative z-20 flex items-center justify-center px-10 md:px-24 lg:px-32 mt-20 lg:mt-0">
+                <h2 class="font-bold font-serif text-[2rem] tracking-wider text-black">THE <span class="font-bold font-serif text-[2rem] text-cyan-500">UNSUNG HERO</span> OF T20WCs</h2>
+            </div>
+            <div class="row h-[75vh] lg:h-[50vh] w-full relative flex items-center justify-end lg:px-14 -mt-5">
+                <div data-scroll data-scroll-speed="1" class="box h-[90%] w-[100%] md:w-[55%] lg:w-[40%]">
+                    <h2 class="font-bold font-serif text-[1.65rem] text-center text-cyan-700 py-2">" 2014 and 2016</h2>
+                    <p class="font-serif text-[1.3rem] px-5 text-center">Ever saw a team getting carried by a single man in 2 T20WCs in a row? Scored 314 runs in 2014 t20wc with an avg of 106! Scored 273 runs alone 
+                    in 2016 t20wc while the second highest total was 88 runs. Won <span class="text-[1.3rem] text-cyan-700 font-serif uppercase">Player of the Tournament
+                    </span> in both of them! <span class="text-[1.65rem] text-cyan-700 font-serif">"</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="h-[100vh] w-full absolute z-0 flex items-center justify-end px-0 lg:px-10 bg-transparent mt-36 lg:mt-0">
+                <img data-scroll data-scroll-speed="2" src="vk-2024t20wc.png" alt="Bat" class="h-[120vh] w-[100%] lg:w-[90vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="row h-[100vh] w-full lg:w-[60%] relative flex flex-wrap gap-x-10 justify-center items-center lg:ml-10 lg:mt-10">
+                <div class="stat-heading h-[7%] w-full text-center uppercase text-[1.5rem] text-gray-700 font-bold font-serif">Stat box</div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 mt-2">T20 WCs</h2>
+                    <p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Runs: 1,292 (Most in T20WC history)</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Average: 58.72</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Half-Centuries: 15</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Player of the Tournament: 2014, 2016</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">T20WC Titles: (1) 2024</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase mt-2">Iconic Knocks</h2>
+                    <p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2014 Semi-Final vs SA: 72*</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2014 Final vs SL: 77*</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2016 vs Australia: 82*</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2016 Semi-Final vs WI: 89*</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2022 vs Pak MCG: 82*</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2024 Final vs SA: 76</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 py-2 uppercase">Clutch Stats</h2>
+                    <p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Avg in Knockout matches: 144</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Avg in T20WC run chase: 518!!!</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Most runs in T20 World Cup history</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Avg of 212 in powerplay</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Strike Rate of 199 in Death overs</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">16 POTM awards in T20Is</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 py-2 uppercase">Fairytale Ending</h2>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Announced T20I retirement after winning the 2024 final</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Ended T20I career with 4,188 runs in 125 matches</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Ended T20Is with 30 50s, 1 century, and high score of 122*</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[100vh] w-full absolute -z-10 flex items-center justify-start px-0 bg-transparent mt-36 lg:mt-60 -ml-10 opacity-0 md:opacity-100 lg:opacity-100">
+            <img data-scroll data-scroll-speed="2" src="vk-test.png" alt="Bat" class="h-[130vh] w-[100%] lg:w-[95vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+        </div>
+        <div class="test relative -z-20 h-[170vh] bg-gradient-to-b from-cyan-400 to-white">
+            <div class="row h-[25vh] lg:h-[40vh] w-[100%] relative z-20 flex items-center justify-center px-10 md:px-24 lg:px-32 mb-14 lg:mb-0">
+                <h2 class="font-bold font-serif text-[2rem] tracking-wider text-black -mt-20">THE <span class="font-bold font-serif text-[2rem] text-blue-900">ARCHITECT</span> OF INDIA'S TEST RENAISSANCE</h2>
+            </div>
+            <div class="h-[100vh] w-full absolute -z-10 flex items-center justify-end px-0 lg:px-8 mt-36 lg:mt-48 bg-transparent">
+                <img src="frame-img2.png" alt="Bat" class="h-[60vh] w-[100%] lg:w-[40vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="h-[100vh] w-full absolute -z-10 flex items-center justify-end px-0 lg:px-16 mt-36 lg:-mt-10 bg-transparent">
+                <img data-scroll data-scroll-speed="-5" src="test-mace-img.png" alt="Bat" class="h-[50vh] w-[100%] lg:w-[30vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="test-stats h-[140vh] -mt-20 flex flex-col justify-center align-middle items-center gap-y-5">
+                <div class="stat h-[30%] w-[100%] lg:w-[35%]">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">" Before Captain Kohli</h2>
+                    <p class="font-serif text-[1.3rem] px-5 text-center">India was cautious and defensive, especially overseas. 0 overseas dominance with 4-0 defeats from Eng and Aus. India was <span class="text-[1.3rem] text-cyan-700 font-serif">ranked 7th
+                    </span> among 10 test playing nations! <span class="text-[1.65rem] text-cyan-700 font-serif">"</span>
+                    </p>
+                </div>
+                <div class="stat h-[30%] w-[100%] lg:w-[35%] mb-20 lg:mb-0">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">" The Begining of Test Glory</h2>
+                    <p class="font-serif text-[1.3rem] px-5 text-center">On December 2014 amidst BGT in Australia, Kohli was announced the new test captain of India! It marked the begining of a tremendous and glorious test chapter for India. Captain Kohli scored <span class="text-[1.3rem] text-cyan-700 font-serif">back to back 100s
+                    </span> in that tour thereafter! <span class="text-[1.65rem] text-cyan-700 font-serif">"</span>
+                    </p>
+                </div>
+                <div class="stat h-[30%] w-[100%] lg:w-[35%]">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">" Journey to No.1</h2>
+                    <p class="font-serif text-[1.3rem] px-5 text-center"> Led India in 60 matches, out of which India won 40, drew 11 and lost 17. Dragged India from no.7 to no.1 and maintained <span class="text-[1.3rem] text-cyan-700 font-serif">no.1 position for 5 consecutive years!</span>
+                    India won <span class="text-[1.3rem] text-cyan-700 font-serif">3 consecutive test maces</span> under his captaincy
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="test-records h-[105vh] bg-gradient-to-b from-white to-red-400">
+            <div class="h-[100vh] w-full absolute z-0 flex items-center justify-end px-0 lg:px-10 bg-transparent mt-36 lg:-mt-10">
+                <img data-scroll data-scroll-speed="3" src="vk-test2.png" alt="Bat" class="h-[110vh] w-[100%] lg:w-[65vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="row h-[100vh] w-full lg:w-[60%] relative flex flex-wrap gap-x-10 justify-center items-center lg:ml-10">
+                <div class="stat-heading h-[7%] w-full text-center uppercase text-[1.5rem] text-red-900 font-bold font-serif">Stat box</div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-red-300 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 mt-2 uppercase">Test Career</h2>
+                    <p>
+                        <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Matches: 123</p>
+                        <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Runs: 9230</p>
+                        <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Centuries: 30</p>
+                        <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Average: 46.85</p>
+                        <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Highest Score: 254* against SA</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-red-300 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase mt-2">Historic Test Victories</h2>
+                    <p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2016 Ind vs WI: Ind won the series 2-0</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2016/17 BGT: Ind won the series 2-1</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2018/19 BGT: Ind won 2-1, winning 1st time in Aus in 71 years</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">2021 Ind vs Eng: <span class="text-[1rem] text-red-700 font-serif">60 overs of hell!</span>
+                        India conquered Lords!</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-red-300 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase">Opponent wise</h2>
+                    <p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Australia: 2,042 runs in 25 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">England: 1,991 runs in 28 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">South Africa: 1,408 runs in 16 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Sri Lanka: 1,085 runs in 11 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">West Indies: 1,019 runs in 16 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">New Zealand: 866 runs in 11 matches</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Bangladesh: 437 runs in 6 matches</p>
+                    </p>
+                </div>
+                <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-red-300 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase">record master</h2>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Most 200s by Indian in tests (7)</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">One of only 3 batters to hit double century against 6 different teams</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">First India to score a D/N Test century</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">1000+ runs for 3 consecutive years (2016/17/18)</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Fastest Indian to 25 test centuries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sena-record h-[130vh] bg-gradient-to-b from-red-400 to-white">
+            <div class="h-[100vh] w-full absolute z-0 flex items-center justify-start px-0 bg-transparent mt-72 lg:mt-14 -ml-10">
+                <img data-scroll data-scroll-speed="3" src="vk-sena2.png" alt="Bat" class="h-[150vh] w-[100%] lg:w-[110vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="sena-header"><h2 class="font-bold font-serif text-red-900 text-[2rem] text-center mr-52 opacity-0 lg:opacity-100">SENA HEROICS</h2></div>
+            <div class="sena-stat h-[130vh] w-full flex flex-col align-middle justify-end items-end px-40 gap-y-10 mt-80 lg:mt-0 opacity-0 md:opacity-100 lg:opacity-100">
+                <div class="box h-[34%] w-[100%] lg:w-[45%] relative z-10">
+                    <h2 class="font-bold font-serif text-[1.32rem] text-center text-red-900 uppercase mt-2 mb-3">BGT 2014-15 Australia</h2>
+                    <p class="font-serif text-[1.22rem] px-3 text-center">The tour that defined Kohli! An astonishing <span class="text-[1.26rem] text-red-700 font-serif">692 runs</span> in 8 innings
+                    with <span class="text-[1.26rem] text-red-700 font-serif">4 hundreds!</span>. Kohli became the first player in history to score 4 hundreds in his first 4 Tests as captain. His fearless 
+                    counterattack against Mitchell Johnson & Co. made headlines worldwide.
+                    </p>
+                </div>
+                <div class="box h-[34%] w-[100%] lg:w-[45%] relative z-10">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-red-900 uppercase mt-2 mb-3">England Tour of 2018</h2>
+                    <p class="font-serif text-[1.22rem] px-3 text-center">From dissappointment in his last England tour of 2014, Kohli turned the tables around in England in 2018. From 133 runs in 2014 at an avg 0f 13 to 
+                    <span class="text-[1.26rem] text-red-700 font-serif">593 runs</span> with an <span class="text-[1.26rem] text-red-700 font-serif">avg of 59.3 </span> and 2 100s. Kohli finished as the leading run 
+                    scorer, 244 runs ahead of the next highest scorer!
+                    </p>
+                </div>
+                <div class="box h-[34%] w-[100%] lg:w-[45%] relative z-10">
+                    <h2 class="font-bold font-serif text-[1.31rem] text-center text-red-900 uppercase mt-2">Masterclass at SA</h2>
+                    <p class="font-serif text-[1.22rem] px-3 text-center"> Highest batting avg among Indian batters in South Africa. 2018, toughest year to bat in last 60 years? Not for Kohli!
+                    Scored a masterful 153 at Centurion, only batter to cross 100 runs in that test, and scored 50% of India's runs!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="odi h-[140vh] bg-gradient-to-b from-white to-cyan-400 relative -z-10">
+            <div class="h-[100vh] w-full absolute -z-10 flex justify-center px-0 lg:px-8 mt-36 lg:mt-40 bg-transparent ml-8">
+                <img data-scroll data-scroll-speed="-3" src="crown-img.png" alt="Bat" class="h-[15vh] w-[40%] lg:w-[15vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="h-[100vh] w-full absolute -z-20 flex justify-center px-0 lg:px-10 bg-transparent mt-48 lg:mt-52">
+                <img src="vk-odi2.png" alt="Bat" class="h-[110vh] w-[90%] lg:w-[65vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="odi-intro h-[140vh]">
+                <div class="row h-[50%] w-full flex justify-start items-center px-10">
+                    <div class="box h-[70%] w-[100%] lg:w-[35%] flex items-center justify-center">
+                        <h2 class="font-bold font-serif text-cyan-700 text-[2.5em] uppercase">and now the <br> format owned <br> by the king</h2>
+                    </div>
+                </div>
+                <div class="row h-[50%] w-full flex align-middle items-center justify-end px-10 mt-20 lg:mt-0">
+                    <div class="box h-[70%] w-[100%] lg:w-[35%] flex items-center justify-center">
+                        <h2 class="font-bold font-serif text-cyan-700 text-[2.5rem] uppercase">where the <br> King surpassed the god</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="odi-stats h-[110vh] bg-cyan-400 py-10 -mb-10">
+            <div class="odi-heading h-[10vh] w-full">
+                <h2 class="font-bold font-serif text-cyan-700 text-[2em] uppercase text-center"> The <span class="font-bold font-serif text-[2rem] text-gray-800">greatest</span> odi player <span class="font-bold font-serif text-[2rem] text-gray-800">of all time</span></h2>
+            </div>
+            <div class="h-[100vh] w-full absolute z-20 flex justify-end px-20 lg:px-10 bg-transparent -mt-20">
+                <img data-scroll data-scroll-speed="3" src="vk-odi3.png" alt="Bat" class="h-[100vh] lg:h-[130vh] w-[100%] lg:w-[90vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+            </div>
+            <div class="boxes h-[80vh] w-[100%] lg:w-[50%] flex flex-wrap gap-x-20 ml-0 lg:ml-32 mt-16 justify-center items-center gap-y-2">
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">MOST ODI 100s (51 and COUNTING)</h2>
+                </div>
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">fastest to 8k, 9k, 10k, 11k, 12k, 13k, 14k odi runs</h2>
+                </div>
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">most runs in a single edition of cwc (756, 2023)</h2>
+                </div>
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">most 100s in odi run chases (27)</h2>
+                </div>
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">highest odi batting avg among 10k+ run scorers</h2>
+                </div>
+                <div data-scroll data-scroll-speed="1" class="box h-[8%] w-[100%] shadow-2xl glowing-border rounded-2xl flex items-center">
+                    <h2 class="font-bold font-serif text-[1.2rem] px-3 text-cyan-900 text-center uppercase before:content-['•'] before:mr-2">most POTM awards in odi for India (40)</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="odi-statbox h-[120vh] bg-gradient-to-b from-cyan-400 to-white">
+            <div class="super h-[100%] flex justify-end items-center">
+                <div class="h-[100vh] w-full absolute z-0 flex items-center justify-start px-0 lg:px-10 bg-transparent mt-36 lg:mt-0">
+                    <img data-scroll data-scroll-speed="2" src="vk-odi6.png" alt="Bat" class="h-[120vh] w-[100%] lg:w-[70vh] opacity-60 md:opacity-100 lg:opacity-100"/>
+                </div>
+
+                <div class="row h-[100vh] w-full lg:w-[60%] relative flex flex-wrap gap-x-10 justify-center items-center lg:ml-10 lg:mt-10">
+                    <div class="stat-heading h-[7%] w-full text-center uppercase text-[1.5rem] text-gray-700 font-bold font-serif">Stat box</div>
+                    <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                        <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 mt-2 uppercase">odi career</h2>
+                        <p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Innings: 290</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Runs: 14,181*</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Average: 57.88*</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Strike rate: 93.34</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">100s: 51*, 50s: 74*</p>
+                        </p>
+                    </div>
+                    <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                        <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase mt-2">odi cwc records</h2>
+                        <p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Runs: 1,795* (2nd highest in WC history)</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Average: 59.83 across 37 matches so far</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Half-Centuries: 11, Centuries: 5</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Player of the Tournament: 2023</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Best WC: 2023 - 765 runs @ 95.62 (World Cup record)</p>
+                        </p>
+                    </div>
+                    <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                        <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 py-2 uppercase">Clutch Stats</h2>
+                        <p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Avg in successful chases: ~90+</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">27 centuries in chases - most in history</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">50+ avg in Aus, SA, Eng etc</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">Avg of 212 in powerplay</p>
+                            <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">7 centuries in ICC ODI events</p>
+                        </p>
+                    </div>
+                    <div class="stats h-[40%] w-[90%] lg:w-[40%] shadow-2xl rounded-4xl transition transform duration-300 hover:scale-[1.04] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                        <h2 class="font-bold font-serif text-[1.31rem] text-center text-gray-700 uppercase">Iconic knocks</h2>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">183 vs Pakistan (2012)</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">133 vs SL (2012) - 86-ball mayhem </p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1">122 vs Eng (2016) Pune </p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1"> 122 vs Pakistan (2023 Asia Cup) </p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1"> 117 vs NZ (2023 WC semi-final)</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1"> 84 vs Aus (2025 CT Semifinal)</p>
+                        <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-1.5 before:content-['•'] before:mr-1"> and many many more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="awards h-[315vh] lg:h-[210vh] bg-gradient-to-b from-white to-cyan-400 mt-40 lg:-mt-10">
+            <h2 class="font-bold font-serif text-[2rem] uppercase text-center text-cyan-900 py-2 mt-80 lg:mt-0">awards and trophies</h2>
+            <div class="container h-[80vh] w-[70%] mx-auto mt-10">
+                <div class="row h-[90%] flex flex-row">
+                    <div class="col h-[50%] w-[35%] flex items-center justify-cente shadow-2xl rounded-3xl my-auto transition transform duration-500 hover:bg-transparent hover:text-white hover:scale-[1.05]">
+                        <h2 id="content" class="font-bold font-serif text-[1.65rem] uppercase text-center text-cyan-600 py-2 px-10 transition transform duration-300 hover:text-cyan-900">UNDER-19 CRICKET WORLD CUP</h2>
+                    </div>
+                    <div class="col relative z-10 h-[100%] w-[65%] -mt-16">
+                        <img id="image" src="vk-u19.png" alt="" class="h-[80vh] w-[80vh] object-contain">
+                    </div>
+                </div>
+                <div class="row relative z-20 h-[10%] flex items-center justify-center gap-10">
+                    <button onclick="prev()" class="h-[100%] w-[10%] bg-transparent text-black rounded-2xl shadow-black shadow-2xl transition transform duration-300 hover:scale-[1.08] hover:bg-cyan-800/80 hover:text-white">Prev</button>
+                    <button onclick="next()" class="h-[100%] w-[10%] bg-transparent text-black rounded-2xl shadow-black shadow-2xl transition transform duration-300 hover:scale-[1.08] hover:bg-cyan-800/80 hover:text-white">Next</button>
+                </div>
+            </div>
+            <div class="all-stat h-[100vh] mt-10 flex flex-wrap justify-center items-center gap-10 px-10">
+                <div class="box h-[45%] w-[100%] lg:w-[45%] rounded-3xl shadow-2xl transition transform duration-500 hover:scale-[1.05] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">Trophies as a player</h2>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC Cricket World Cup: 2011</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC Champions Trophy: 2013</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC T20 World Cup: 2024</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">Asia Cup: 2010, 2016 (T20), 2018, 2023</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC Champions Trophy: 2025</p>
+                </div>
+                <div class="box h-[45%] w-[100%] lg:w-[45%] rounded-3xl shadow-2xl transition transform duration-500 hover:scale-[1.05] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">ICC Awards</h2>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Sir Garfield Sobers Trophy (ICC Cricketer of the Year): 2017, 2018</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">ICC ODI Player of the Year: 2012, 2017, 2018, 2023</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">ICC Test Player of the Year: 2018</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">ICC Cricketer of the Decade: 2011-2020</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">ICC ODI Cricketer of the Decade: 2011-2020</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Wisden Leading Cricketer in the World: 2016, 2017, 2018</p>
+                </div>
+                <div class="box h-[45%] w-[100%] lg:w-[45%] rounded-3xl shadow-2xl transition transform duration-500 hover:scale-[1.05] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">Trophies as a Captain</h2>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">U-19 Cricket World Cup</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">Border Gavaskar Trophy 2018 Australia</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC Test Mace: 2017, 2018, 2019</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC Champions Trophy Finalist: 2017</p>
+                    <p class="font-serif text-[1.1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-2">ICC World Test Championship Finalist: 2019-21</p>
+                </div>
+                <div class="box h-[45%] w-[100%] lg:w-[45%] rounded-3xl shadow-2xl transition transform duration-500 hover:scale-[1.05] hover:bg-cyan-500 hover:text-white hover:cursor-pointer">
+                    <h2 class="font-bold font-serif text-[1.5rem] text-center text-cyan-700 py-2 uppercase">Other Awards and Honors</h2>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">National Award: Arjuna Award 2013</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">National Award: Padma Shri 2017</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">National Award: Rajiv Gandhi Khel Ratna 2018</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">Polly Umrigar Award: 2011-12, 2014, 15, 16, 17, 18</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">CEAT Intl Cricketer of the Year: 2011, 12, 13, 14, 18, 19</p>
+                    <p class="font-serif text-[1rem] px-2 md:my-0 lg:my-3 before:content-['•'] before:mr-1">People's Choice Awards India - Favorite Sportsperson: 2012</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+  const data = [
+    { content: "ODI CRICKET WORLD CUP 2011", image: "vk-2011wc.png" },
+    { content: "CHAMPIONS TROPHY 2013", image: "vk-ct2013.png" },
+    { content: "TEST MACES 2017-2019", image: "vk-testmace2017.png" },
+    { content: "BORDER GAVASKAR TROPHY 2018/19", image: "vk-2018bgt.png" },
+    { content: "ASIA CUPS 2010, 2016, 2018, 2023", image: "vk-asiacup.png" },
+    { content: "T-20 WORLD CUP 2024", image: "vk-t20wc2024.png" },
+    { content: "CHAMPIONS TROPHY 2025", image: "vk-ct2025.png" }
+  ];
+
+  let index = 0;
+
+  function update() {
+    document.getElementById("content").innerText = data[index].content;
+    document.getElementById("image").src = data[index].image;
+  }
+
+  function prev() {
+    index = (index - 1 + data.length) % data.length;
+    update();
+  }
+
+  function next() {
+    index = (index + 1) % data.length;
+    update();
+  }
+</script>
+    <!-- ANIMATION SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script src="index.js"></script>
+</html>
